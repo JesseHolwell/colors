@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+    <uib-tabset>
+        <uib-tab heading="Palette" ng-repeat="palette in palettes">
+
+            <div class="panel panel-default" style="height:30vh; width:30vh" ng-repeat="color in palette.colors">
+                <!--ng-class="background-color: palette.color">-->
+
+                <input type="text" ng-model="color.color" />
+            </div>
+            <button class="btn btn-primary" ng-click="addColor(palette)">+</button>
+
+        </uib-tab>
+        <button ng-click="addPalette()" class="btn btn-secondary">+</button>
+    </uib-tabset>
+</div>

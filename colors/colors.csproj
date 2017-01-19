@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13249669-DD25-4830-B045-981F4219AF7E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>blur</RootNamespace>
+    <AssemblyName>blur</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44316</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\ADM-dateTimePicker.css" />
+    <Content Include="lib\ADM-dateTimePicker.js" />
+    <Content Include="lib\icomoon.css" />
+    <Content Include="app\JHDGUtils.js" />
+    <Content Include="lib\select.css" />
+    <Content Include="lib\select.js" />
+    <Content Include="app\theme\directives\confirmOnExit.js" />
+    <Content Include="app\theme\directives\soEnter.js" />
+    <Content Include="assets\fonts\icomoon.svg" />
+    <Content Include="assets\img\theme\vendor\leaflet\dist\images\markers-soft.png" />
+    <Content Include="lib\aes.js" />
+    <Content Include="lib\angular-bootstrap-calendar-tpls.min.js" />
+    <Content Include="lib\angular-bootstrap-calendar.min.js" />
+    <Content Include="lib\angular-cookies.js" />
+    <Content Include="lib\angular-drag-and-drop-lists.min.js" />
+    <Content Include="lib\angular-leaflet-directive.js" />
+    <Content Include="lib\angular-sanitize.js" />
+    <Content Include="lib\bootstrap.js" />
+    <Content Include="lib\closeicon.png" />
+    <Content Include="lib\iso8601.min.js" />
+    <Content Include="lib\leaflet_awesome_number_markers.css" />
+    <Content Include="lib\leaflet_awesome_number_markers.js" />
+    <Content Include="lib\mdo-angular-cryptography.js" />
+    <Content Include="lib\moment-timezone.js" />
+    <Content Include="lib\moment-with-locales.js" />
+    <Content Include="lib\select2.css" />
+    <Content Include="lib\signature_pad.js" />
+    <Content Include="lib\ui-bootstrap.js" />
+    <Content Include="lib\ui-grid.min.css" />
+    <Content Include="lib\ui-grid.min.js" />
+    <Content Include="lib\ui-grid.svg" />
+    <Content Include="lib\xml2json.js" />
+    <Content Include="packages.config" />
+    <Content Include="assets\fonts\socicon.eot" />
+    <Content Include="assets\fonts\socicon.ttf" />
+    <Content Include="assets\fonts\socicon.woff" />
+    <Content Include="assets\fonts\socicon.woff2" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\ionicons.eot" />
+    <Content Include="assets\fonts\ionicons.ttf" />
+    <Content Include="assets\fonts\ionicons.woff" />
+    <Content Include="assets\fonts\icomoon.eot" />
+    <Content Include="assets\fonts\icomoon.ttf" />
+    <Content Include="assets\fonts\icomoon.woff" />
+    <Content Include="lib\ui-grid.eot" />
+    <Content Include="lib\ui-grid.ttf" />
+    <Content Include="lib\ui-grid.woff" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\app.js" />
+    <Content Include="assets\main.css" />
+    <Content Include="app\pages\colors\colors.html" />
+    <Content Include="app\pages\colors\colors.module.js" />
+    <Content Include="app\pages\colors\colorsCtrl.js" />
+    <Content Include="app\pages\pages.module.js" />
+    <Content Include="app\theme\components\backTop\backTop.directive.js" />
+    <Content Include="app\theme\components\backTop\backTop.html" />
+    <Content Include="app\theme\components\backTop\lib\jquery.backTop.min.js" />
+    <Content Include="app\theme\components\baPanel\baPanel.directive.js" />
+    <Content Include="app\theme\components\baPanel\baPanel.service.js" />
+    <Content Include="app\theme\components\baPanel\baPanelBlur.directive.js" />
+    <Content Include="app\theme\components\baPanel\baPanelBlurHelper.service.js" />
+    <Content Include="app\theme\components\baPanel\baPanelSelf.directive.js" />
+    <Content Include="app\theme\components\baSidebar\ba-sidebar.html" />
+    <Content Include="app\theme\components\baSidebar\baSidebar.directive.js" />
+    <Content Include="app\theme\components\baSidebar\baSidebar.service.js" />
+    <Content Include="app\theme\components\baSidebar\BaSidebarCtrl.js" />
+    <Content Include="app\theme\components\baSidebar\baSidebarHelpers.directive.js" />
+    <Content Include="app\theme\components\baWizard\baWizard.directive.js" />
+    <Content Include="app\theme\components\baWizard\baWizard.html" />
+    <Content Include="app\theme\components\baWizard\baWizardCtrl.js" />
+    <Content Include="app\theme\components\baWizard\baWizardStep.directive.js" />
+    <Content Include="app\theme\components\baWizard\baWizardStep.html" />
+    <Content Include="app\theme\components\components.module.js" />
+    <Content Include="app\theme\components\contentTop\contentTop.directive.js" />
+    <Content Include="app\theme\components\contentTop\contentTop.html" />
+    <Content Include="app\theme\components\msgCenter\msgCenter.directive.js" />
+    <Content Include="app\theme\components\msgCenter\msgCenter.html" />
+    <Content Include="app\theme\components\msgCenter\MsgCenterCtrl.js" />
+    <Content Include="app\theme\components\pageTop\pageTop.directive.js" />
+    <Content Include="app\theme\components\pageTop\pageTop.html" />
+    <Content Include="app\theme\components\pageTop\pageTopCtrl.js" />
+    <Content Include="app\theme\components\toastrLibConfig.js" />
+    <Content Include="app\theme\components\widgets\widgets.directive.js" />
+    <Content Include="app\theme\components\widgets\widgets.html" />
+    <Content Include="app\theme\directives\angucomplete-alt.css" />
+    <Content Include="app\theme\directives\angucomplete-alt.js" />
+    <Content Include="app\theme\directives\animatedChange.js" />
+    <Content Include="app\theme\directives\autoExpand.js" />
+    <Content Include="app\theme\directives\autoFocus.js" />
+    <Content Include="app\theme\directives\includeWithScope.js" />
+    <Content Include="app\theme\directives\ionSlider.js" />
+    <Content Include="app\theme\directives\mdAutocomplete.js" />
+    <Content Include="app\theme\directives\ngFileSelect.js" />
+    <Content Include="app\theme\directives\scrollPosition.js" />
+    <Content Include="app\theme\directives\trackWidth.js" />
+    <Content Include="app\theme\directives\zoomIn.js" />
+    <Content Include="app\theme\filters\image\appImage.js" />
+    <Content Include="app\theme\filters\image\kameleonImg.js" />
+    <Content Include="app\theme\filters\image\profilePicture.js" />
+    <Content Include="app\theme\filters\text\removeHtml.js" />
+    <Content Include="app\theme\services\baUtil.js" />
+    <Content Include="app\theme\services\fileReader.js" />
+    <Content Include="app\theme\services\preloader.js" />
+    <Content Include="app\theme\services\stopableInterval.js" />
+    <Content Include="app\theme\theme.config.js" />
+    <Content Include="app\theme\theme.configProvider.js" />
+    <Content Include="app\theme\theme.constants.js" />
+    <Content Include="app\theme\theme.module.js" />
+    <Content Include="app\theme\theme.run.js" />
+    <Content Include="app\theme\theme.service.js" />
+    <Content Include="assets\fonts\socicon.svg" />
+    <Content Include="assets\img\app\browsers\chrome.svg" />
+    <Content Include="assets\img\app\browsers\firefox.svg" />
+    <Content Include="assets\img\app\browsers\ie.svg" />
+    <Content Include="assets\img\app\browsers\opera.svg" />
+    <Content Include="assets\img\app\browsers\safari.svg" />
+    <Content Include="assets\img\app\feed\genom.png" />
+    <Content Include="assets\img\app\feed\my-little-kitten.png" />
+    <Content Include="assets\img\app\feed\new-york-location.png" />
+    <Content Include="assets\img\app\feed\vader-and-me-preview.png" />
+    <Content Include="assets\img\app\my-app-logo.png" />
+    <Content Include="assets\img\app\profile\Alexander.png" />
+    <Content Include="assets\img\app\profile\Andrey.png" />
+    <Content Include="assets\img\app\profile\Kostya.png" />
+    <Content Include="assets\img\app\profile\Nasta.png" />
+    <Content Include="assets\img\app\profile\Nick.png" />
+    <Content Include="assets\img\app\profile\Vlad.png" />
+    <Content Include="assets\img\app\skin-thumbnails\01_default.jpg" />
+    <Content Include="assets\img\app\skin-thumbnails\02_transparent.jpg" />
+    <Content Include="assets\img\app\skin-thumbnails\03_blue.jpg" />
+    <Content Include="assets\img\app\skin-thumbnails\04_peachy.jpg" />
+    <Content Include="assets\img\app\skin-thumbnails\05_material.jpg" />
+    <Content Include="assets\img\app\skin-thumbnails\06_transblue.jpg" />
+    <Content Include="assets\img\app\todo\check-icon.png" />
+    <Content Include="assets\img\app\typography\banner.png" />
+    <Content Include="assets\img\app\typography\typo01.png" />
+    <Content Include="assets\img\app\typography\typo03.png" />
+    <Content Include="assets\img\app\typography\typo04.png" />
+    <Content Include="assets\img\app\typography\typo05.png" />
+    <Content Include="assets\img\app\typography\typo06.png" />
+    <Content Include="assets\img\app\typography\typo07.png" />
+    <Content Include="assets\img\arrow-green-up.svg" />
+    <Content Include="assets\img\arrow-red-down.svg" />
+    <Content Include="assets\img\blue-bg.jpg" />
+    <Content Include="assets\img\blur-bg-blurred.jpg" />
+    <Content Include="assets\img\blur-bg-mobile.jpg" />
+    <Content Include="assets\img\blur-bg.jpg" />
+    <Content Include="assets\img\chernika.png" />
+    <Content Include="assets\img\comments.svg" />
+    <Content Include="assets\img\face.svg" />
+    <Content Include="assets\img\favicon-16x16.png" />
+    <Content Include="assets\img\favicon-32x32.png" />
+    <Content Include="assets\img\favicon-96x96.png" />
+    <Content Include="assets\img\green-bg-blurred.jpg" />
+    <Content Include="assets\img\green-bg.jpg" />
+    <Content Include="assets\img\money.svg" />
+    <Content Include="assets\img\peachy-bg.jpg" />
+    <Content Include="assets\img\person.svg" />
+    <Content Include="assets\img\pseudo-blur.png" />
+    <Content Include="assets\img\refresh.svg" />
+    <Content Include="assets\img\shopping-cart.svg" />
+    <Content Include="assets\img\theme\icon\feed\feed-image.svg" />
+    <Content Include="assets\img\theme\icon\feed\feed-location.svg" />
+    <Content Include="assets\img\theme\icon\feed\feed-video.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Alien.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Analytics.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Apartment.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Batman.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Beach.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Bell.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Bonsai.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Boss-3.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Boss-5.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Burglar.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Bus.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Candy.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Checklist.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Cheese.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Chessboard.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Clipboard-Plan.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Desert.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Dna.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Euro-Coin.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Food-Dome.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Hacker.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Images.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Key.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Laptop-Signal.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Locked-Cloud.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Love-Letter.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Magician.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Makeup.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Medal-2.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Microscope.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Mind-Map-Paper.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Money-Increase.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Music-Equalizer.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Ninja.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Online-Shopping.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Pantone.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Party-Poppers.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Phone-Booth.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Programming.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Santa.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Shop.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Street-View.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Student-3.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Surfer.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Surgeon.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Tower.svg" />
+    <Content Include="assets\img\theme\icon\kameleon\Vector.svg" />
+    <Content Include="assets\img\theme\no-photo.png" />
+    <Content Include="assets\img\theme\palette.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIcon.gif" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconBlack.gif" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconH.gif" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconHBlack.gif" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconRectBig.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconRectBigBlack.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconRectBigBlackH.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconRectBigH.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconRectSmall.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconRectSmallBlack.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconRectSmallBlackH.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconRectSmallH.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconRoundBig.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconRoundBigBlack.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconRoundBigBlackH.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconRoundBigH.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconRoundSmall.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconRoundSmallBlack.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconRoundSmallBlackH.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\dragIconRoundSmallH.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\export.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\exportWhite.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\lens.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\lensWhite.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\lensWhite_old.png" />
+    <Content Include="assets\img\theme\vendor\amcharts\dist\amcharts\images\lens_old.png" />
+    <Content Include="assets\img\theme\vendor\ammap\dist\ammap\images\arrowDown.gif" />
+    <Content Include="assets\img\theme\vendor\ammap\dist\ammap\images\arrowUp.gif" />
+    <Content Include="assets\img\theme\vendor\ammap\dist\ammap\images\export.png" />
+    <Content Include="assets\img\theme\vendor\ammap\dist\ammap\images\homeIcon.gif" />
+    <Content Include="assets\img\theme\vendor\ammap\dist\ammap\images\homeIconWhite.gif" />
+    <Content Include="assets\img\theme\vendor\ammap\dist\ammap\images\minus.gif" />
+    <Content Include="assets\img\theme\vendor\ammap\dist\ammap\images\panDown.gif" />
+    <Content Include="assets\img\theme\vendor\ammap\dist\ammap\images\panLeft.gif" />
+    <Content Include="assets\img\theme\vendor\ammap\dist\ammap\images\panRight.gif" />
+    <Content Include="assets\img\theme\vendor\ammap\dist\ammap\images\panUp.gif" />
+    <Content Include="assets\img\theme\vendor\ammap\dist\ammap\images\plus.gif" />
+    <Content Include="assets\img\theme\vendor\ammap\dist\ammap\images\xIcon.gif" />
+    <Content Include="assets\img\theme\vendor\ammap\dist\ammap\images\xIconH.gif" />
+    <Content Include="assets\img\theme\vendor\ionrangeslider\img\sprite-skin-flat.png" />
+    <Content Include="assets\img\theme\vendor\ionrangeslider\img\sprite-skin-modern.png" />
+    <Content Include="assets\img\theme\vendor\ionrangeslider\img\sprite-skin-nice.png" />
+    <Content Include="assets\img\theme\vendor\ionrangeslider\img\sprite-skin-simple.png" />
+    <Content Include="assets\img\theme\vendor\jstree\dist\themes\default-dark\32px.png" />
+    <Content Include="assets\img\theme\vendor\jstree\dist\themes\default-dark\40px.png" />
+    <Content Include="assets\img\theme\vendor\jstree\dist\themes\default-dark\style.css" />
+    <Content Include="assets\img\theme\vendor\jstree\dist\themes\default-dark\style.min.css" />
+    <Content Include="assets\img\theme\vendor\jstree\dist\themes\default-dark\throbber.gif" />
+    <Content Include="assets\img\theme\vendor\jstree\dist\themes\default\32px.png" />
+    <Content Include="assets\img\theme\vendor\jstree\dist\themes\default\40px.png" />
+    <Content Include="assets\img\theme\vendor\jstree\dist\themes\default\style.css" />
+    <Content Include="assets\img\theme\vendor\jstree\dist\themes\default\style.min.css" />
+    <Content Include="assets\img\theme\vendor\jstree\dist\themes\default\throbber.gif" />
+    <Content Include="assets\img\theme\vendor\leaflet\dist\images\layers-2x.png" />
+    <Content Include="assets\img\theme\vendor\leaflet\dist\images\layers.png" />
+    <Content Include="assets\img\theme\vendor\leaflet\dist\images\marker-icon-2x.png" />
+    <Content Include="assets\img\theme\vendor\leaflet\dist\images\marker-icon.png" />
+    <Content Include="assets\img\theme\vendor\leaflet\dist\images\marker-shadow.png" />
+    <Content Include="assets\img\transblue-bg.jpg" />
+    <Content Include="assets\img\Untitled-1.jpg" />
+    <Content Include="assets\pictures\pic-andrey.png" />
+    <Content Include="assets\pictures\pic-kostia.png" />
+    <Content Include="assets\pictures\pic-nasta.png" />
+    <Content Include="assets\pictures\pic-profile.png" />
+    <Content Include="assets\pictures\pic-vova.png" />
+    <Content Include="assets\pictures\tinder-logo.jpg" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\fonts\ionicons.svg" />
+    <Content Include="index.html" />
+    <Content Include="lib\angular-animate.js" />
+    <Content Include="lib\angular-progress-button-styles.min.css" />
+    <Content Include="lib\angular-progress-button-styles.min.js" />
+    <Content Include="lib\angular-route.js" />
+    <Content Include="lib\angular-slimscroll.js" />
+    <Content Include="lib\angular-toastr.css" />
+    <Content Include="lib\angular-toastr.tpls.js" />
+    <Content Include="lib\angular-touch.js" />
+    <Content Include="lib\angular-ui-router.js" />
+    <Content Include="lib\angular.js" />
+    <Content Include="lib\animate.css" />
+    <Content Include="lib\bootstrap-select.css" />
+    <Content Include="lib\bootstrap-select.js" />
+    <Content Include="lib\bootstrap-switch.css" />
+    <Content Include="lib\bootstrap-switch.js" />
+    <Content Include="lib\bootstrap-tagsinput.css" />
+    <Content Include="lib\bootstrap-tagsinput.js" />
+    <Content Include="lib\bootstrap.css" />
+    <Content Include="lib\font-awesome.css" />
+    <Content Include="lib\fullcalendar.css" />
+    <Content Include="lib\fullcalendar.js" />
+    <Content Include="lib\ionicons.css" />
+    <Content Include="lib\jquery-ui.js" />
+    <Content Include="lib\jquery.easing.js" />
+    <Content Include="lib\jquery.js" />
+    <Content Include="lib\jquery.slimscroll.js" />
+    <Content Include="lib\leaflet-src.js" />
+    <Content Include="lib\leaflet.css" />
+    <Content Include="lib\moment.js" />
+    <Content Include="lib\smart-table.js" />
+    <Content Include="lib\sortable.js" />
+    <Content Include="lib\style.css" />
+    <Content Include="lib\ui-bootstrap-tpls.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\img\theme\amChart\" />
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3131</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3131/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
