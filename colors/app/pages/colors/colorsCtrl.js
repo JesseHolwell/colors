@@ -15,7 +15,7 @@
         }
 
         $scope.addColor = function (palette) {
-            palette.colors.push({color: '#000000'});
+            palette.colors.push({ color: '#000000' });
         }
 
         $scope.copy = function (color) {
@@ -37,6 +37,12 @@
                 ]
             }
         ]
+
+        $scope.$watch('$scope.palettes[0].colors[0].color', function () {
+        $rootScope.primary = $scope.palettes[0].colors[0].color;
+        $rootScope.$broadcast("primaryChanged", true);
+
+        })
     }
 
 })();
