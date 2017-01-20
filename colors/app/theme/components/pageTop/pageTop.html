@@ -1,25 +1,3 @@
 <div class="page-top clearfix" scroll-position="scrolled" max-height="50" ng-class="{'scrolled': scrolled}">
-  <a href="#/dashboard" class="al-logo clearfix"><span>C</span>olors</a>
-  <a href class="collapse-menu-link ion-navicon" ba-sidebar-toggle-menu></a>
-
-  <div class="search">
-    <!--<i class="ion-ios-search-strong" ng-click="startSearch()"></i>-->
-    <!--<input id="searchInput" type="text" placeholder="Search for...">-->
-  </div>
-
-  <div class="user-profile clearfix">
-    <div class="al-user-profile" uib-dropdown>
-      <a uib-dropdown-toggle class="profile-toggle-link">
-        <img width="10" ng-if="subscriber" height="10" ng-src="data:image/JPEG;base64,{{(subscriber.Logo || tempsubscriber.Logo)}}">
-        <img width="10" ng-if="tempsubscriber" height="10" ng-src="{{(subscriber.Logo || tempsubscriber.Logo)}}">
-      </a>
-      <ul  class="top-dropdown-menu profile-dropdown" uib-dropdown-menu>
-        <li><i class="dropdown-arr"></i></li>
-        <li><a href="#/profile"><i class="fa fa-user"></i>Profile</a></li>
-        <!--<li><a href><i class="fa fa-cog"></i>Settings</a></li>-->
-        <li><a href class="signout" ng-click="Logout()"><i class="fa fa-power-off"></i>Sign out</a></li>
-      </ul>
-    </div>
-    <msg-center></msg-center>
-  </div>
+  <a href="#/colors" class="al-logo clearfix"><span>C</span>olors</a>
 </div>

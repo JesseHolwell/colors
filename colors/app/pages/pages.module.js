@@ -10,6 +10,7 @@
     .config(routeConfig);
 
     function routeConfig($urlRouterProvider, baSidebarServiceProvider) {
+      
 
     }
 

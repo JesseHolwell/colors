@@ -9,13 +9,34 @@
 
         $scope.palettes = [];
 
+
         $scope.addPalette = function () {
             $scope.palettes.push({colors: []})
         }
 
         $scope.addColor = function (palette) {
-            palette.colors.push({});
+            palette.colors.push({color: '#000000'});
         }
+
+        $scope.copy = function (color) {
+            //Todo: better solution
+            window.prompt("Copy to clipboard: Ctrl+C, Enter", color);
+            toastr.success(color.color + " copied to clipboard");
+        }
+
+        //init
+        $scope.palettes = [
+            {
+                colors: [
+                    {
+                        color: '#33AAAA'
+                    },
+                    {
+                        color: '#AA5555'
+                    }
+                ]
+            }
+        ]
     }
 
 })();

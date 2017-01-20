@@ -1,15 +1,22 @@
-<div class="panel panel-default">
-    <uib-tabset>
-        <uib-tab heading="Palette" ng-repeat="palette in palettes">
+<div class="col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+        <uib-tabset>
+            <uib-tab heading="Palette" ng-repeat="palette in palettes" >
 
-            <div class="panel panel-default" style="height:30vh; width:30vh" ng-repeat="color in palette.colors">
-                <!--ng-class="background-color: palette.color">-->
+                <form class="form-horizontal" style="height:75vh">
+                    <div class="panel panel-default col-md-3" style="height:30vh; width:30vh; margin-left:5px; margin-right:5px" ng-repeat="color in palette.colors" ng-style="{'background-color': color.color != null ? color.color : 'red'}">
 
-                <input type="text" ng-model="color.color" />
-            </div>
-            <button class="btn btn-primary" ng-click="addColor(palette)">+</button>
+                        <div class="input-group">
+                            <input type="text" class="form-control" ng-model="color.color" />
+                            <span style="cursor:pointer" class="input-group-addon" ng-click="copy(color)"><i class="ion-ios-copy"></i></span>
+                        </div>
 
-        </uib-tab>
-        <button ng-click="addPalette()" class="btn btn-secondary">+</button>
-    </uib-tabset>
+                    </div>
+                    <button class="btn btn-secondary" ng-click="addColor(palette)">+</button>
+                </form>
+
+            </uib-tab>
+            <button ng-click="addPalette()" style="margin-top:3px" class="btn btn-secondary">+</button>
+        </uib-tabset>
+    </div>
 </div>

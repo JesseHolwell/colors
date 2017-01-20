@@ -32,16 +32,13 @@
 <body>
     <div class="body-bg"></div>
     <main ng-if="$pageFinishedLoading" ng-class="{ 'menu-collapsed': $baSidebarService.isMenuCollapsed() }">
-
-        <ba-sidebar></ba-sidebar>
         <page-top></page-top>
 
-        <div class="al-main">
+        <!--<div class="al-main">-->
             <div class="al-content">
-                <content-top></content-top>
                 <div ui-view></div>
             </div>
-        </div>
+        <!--</div>-->
 
         <footer class="al-footer clearfix">
             <div class="al-footer-right">
@@ -51,8 +48,6 @@
                 <div class="al-copy"></div>
             </div>
         </footer>
-
-        <back-top></back-top>
     </main>
 
     <div id="preloader" http-loader>

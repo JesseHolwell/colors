@@ -12,7 +12,9 @@
          function (event, toState, toParams, fromState, fromParams) {
              $rootScope.prevState = fromState;
              $rootScope.$broadcast("pageChanged", fromState);
+
          });
+             $state.go('colors');
 
         $rootScope.GetErrorMessage = function (error) {
             var errorString = "";
