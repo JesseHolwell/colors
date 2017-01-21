@@ -8,33 +8,19 @@
 
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900&subset=latin,greek,greek-ext,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
 
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
-
-    <link rel="stylesheet" href="lib/ionicons.css">
     <link rel="stylesheet" href="lib/angular-toastr.css">
     <link rel="stylesheet" href="lib/animate.css">
     <link rel="stylesheet" href="lib/bootstrap.css">
-    <link rel="stylesheet" href="lib/bootstrap-select.css">
-    <link rel="stylesheet" href="lib/bootstrap-switch.css">
-    <link rel="stylesheet" href="lib/bootstrap-tagsinput.css">
-    <link rel="stylesheet" href="lib/font-awesome.css">
-    <link rel="stylesheet" href="lib/fullcalendar.css">
-    <link rel="stylesheet" href="lib/leaflet_awesome_number_markers.css" />
-    <link rel="stylesheet" href="lib/leaflet.css">
-    <link rel="stylesheet" href="lib/angular-progress-button-styles.min.css">
     <link rel="stylesheet" href="lib/style.css">
-
     <link rel="stylesheet" href="assets/main.css">
 
 </head>
 <body>
+    <!-- APP -->
+
     <div class="body-bg"></div>
+
     <main ng-if="$pageFinishedLoading" ng-class="{ 'menu-collapsed': $baSidebarService.isMenuCollapsed() }">
-        <!--<div class="page-top clearfix" scroll-position="scrolled" max-height="50" ng-class="{'scrolled': scrolled}">
-            <a href="#/colors" class="al-logo clearfix"><span>C</span>olors</a>
-        </div>-->
 
         <div class="al-content">
             <div ui-view></div>
@@ -44,9 +30,6 @@
             <div class="al-footer-right">
                 <a href="https://github.com/JesseHolwell">Jesse Holwell 2017</a>
             </div>
-            <div class="al-footer-main clearfix">
-                <div class="al-copy"></div>
-            </div>
         </footer>
     </main>
 
@@ -54,51 +37,30 @@
         <div></div>
     </div>
 
+    <!-- APP-END -->
+
+
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNtupUIU2fW1FYOOqhjheguMtpqWImMpc&libraries=places"></script>
 
-    <link href="lib/icomoon.css" rel="stylesheet" />
+    <!-- Lib -->
     <script src="lib/jquery.js"></script>
-    <script src="lib/xml2json.js"></script>
     <script src="lib/angular.js"></script>
     <script src="lib/angular-route.js"></script>
     <script src="lib/jquery.slimscroll.js"></script>
     <script src="lib/angular-slimscroll.js"></script>
-    <script src="lib/smart-table.js"></script>
     <script src="lib/angular-toastr.tpls.js"></script>
-    <script src="lib/angular-touch.js"></script>
     <script src="lib/jquery-ui.js"></script>
-    <script src="lib/sortable.js"></script>
-    <script src="lib/bootstrap-select.js"></script>
-    <script src="lib/bootstrap-switch.js"></script>
-    <script src="lib/bootstrap-tagsinput.js"></script>
-    <script src="lib/moment-with-locales.js"></script>
-    <script src="lib/moment-timezone.js"></script>
-    <script src="lib/fullcalendar.js"></script>
-    <script src="lib/jquery.easing.js"></script>
-    <script src="lib/leaflet-src.js"></script>
-    <script src="lib/angular-progress-button-styles.min.js"></script>
     <script src="lib/angular-ui-router.js"></script>
     <script src="lib/angular-animate.js"></script>
-    <script src="lib/angular-drag-and-drop-lists.min.js"></script>
-    <script src="lib/aes.js"></script>
-    <script src="lib/mdo-angular-cryptography.js"></script>
     <script src="lib/ui-bootstrap.js"></script>
     <script src="lib/ui-bootstrap-tpls.js"></script>
-    <script src="lib/signature_pad.js"></script>
-    <script src="lib/angular-leaflet-directive.js"></script>
-    <script src="lib/leaflet_awesome_number_markers.js"></script>
     <script src="lib/bootstrap.js"></script>
-    <script src="lib/ui-grid.min.js"></script>
-    <link rel="stylesheet" href="lib/ui-grid.min.css">
     <script src="lib/angular-sanitize.js"></script>
-    <link rel="stylesheet" href="lib/select2.css">
-    <script src="lib/angular-cookies.js"></script>
-    <link href="lib/select.css" rel="stylesheet" />
-    <script src="lib/select.js"></script>
+    <script src="lib/angular-toggle-switch.min.js"></script>
 
 
-
-
+    <!-- Theme -->
     <script src="app/theme/theme.module.js"></script>
     <link href="app/theme/directives/angucomplete-alt.css" rel="stylesheet">
     <script src="app/theme/components/components.module.js"></script>
@@ -146,14 +108,10 @@
     <script src="app/theme/filters/text/removeHtml.js"></script>
     <script src="app/theme/components/backTop/lib/jquery.backTop.min.js"></script>
     <script src="app/JHDGUtils.js"></script>
-    <script src="app/theme/directives/soEnter.js"></script>
 
-    <link href="lib/ADM-dateTimePicker.css" rel="stylesheet" />
-    <script src="lib/ADM-dateTimePicker.js"></script>
-
+    <!-- Pages -->
     <script src="app/pages/pages.module.js"></script>
     <script src="app/app.js"></script>
-
     <script src="app/pages/colors/colors.module.js"></script>
     <script src="app/pages/colors/colorsCtrl.js"></script>
 

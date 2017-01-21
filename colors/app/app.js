@@ -5,7 +5,7 @@
 // angular app
 
 (function (BlurAdmin) {
-    BlurAdmin.run(function ($rootScope, $crypto, $state, $stateParams, $cookies, $timeout, $http, $location, $window) {
+    BlurAdmin.run(function ($rootScope, $state, $stateParams, $timeout, $http, $location, $window) {
 
         $rootScope.version = "1.1.11";
         $rootScope.$on('$stateChangeStart',
@@ -199,23 +199,12 @@
 
 })(
 angular.module('BlurAdmin', [
-  'ngAnimate',
-  'ui.bootstrap',
-  'ui.sortable',
   'ui.router',
-  'ngTouch',
-  'ngCookies',
+  'toggle-switch',
+  'ngSanitize',
   'toastr',
-  'smart-table',
-  'ui.slimscroll',
-  'angular-progress-button-styles',
   'BlurAdmin.theme',
   'BlurAdmin.pages',
-  'angucomplete-alt',
-  'leaflet-directive',
-  'mdo-angular-cryptography',
-  'ngSanitize',
-  'ui.select',
 
 
 ]).factory('httpLoaderInterceptor', ['$rootScope', function ($rootScope) {
@@ -257,9 +246,6 @@ angular.module('BlurAdmin', [
 
 angular.module('BlurAdmin').config(['$httpProvider', function ($httpProvider) {
     $httpProvider.interceptors.push('httpLoaderInterceptor');
-}]),
-angular.module('BlurAdmin').config(['$cryptoProvider', function ($cryptoProvider) {
-    $cryptoProvider.setCryptographyKey('ABCD123');
 }]),
 
 angular.module('BlurAdmin').config(function ($logProvider) {

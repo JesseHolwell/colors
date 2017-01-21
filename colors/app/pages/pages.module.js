@@ -3,7 +3,6 @@
 
     angular.module('BlurAdmin.pages', [
       'ui.router',
-       'dndLists',
       'BlurAdmin.pages.colors',
 
     ])

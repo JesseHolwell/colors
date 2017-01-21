@@ -1,7 +1,9 @@
-<div style="width:100%; height:60px" ng-style="{'background-color': palettes[0].colors[0].color != null ? palettes[0].colors[0].color : 'red'}">
+<div style="width:100%; height:60px; box-shadow:" ng-style="{'background-color': palettes[0].colors[0].color != null ? palettes[0].colors[0].color : 'red'}">
     <!--<label ng-style="{'font-color': palettes[0].colors[0].color > '#999999' ? 'white' : 'black'}">Palette</label>-->
-    <a style="margin-left:10px; font-size:32px" href="#/colors" class="al-logo clearfix">
-        <span ng-style="{'color': palettes[0].colors[1].color != null ? palettes[0].colors[1].color : 'red'}">C</span>olors
+    <a style="margin-left:10px;" class="al-logo clearfix" ng-click="plight = !plight">
+        <span ng-style="{'color': palettes[0].colors[1].color != null ? palettes[0].colors[1].color : 'black'}">C</span>
+        <span style="margin-left:-7px" ng-style="{'color': plight == true ? '#DDDDDD' : '#333333'}">OLORS</span>
+
     </a>
 </div>
 
@@ -9,21 +11,52 @@
     <div class="panel panel-default" ng-repeat="palette in palettes">
         <div class="panel-heading" ng-style="{'background-color': palette.colors[1].color != null ? palette.colors[1].color : 'red'}">
             <!--<label ng-style="{'font-color': palettes[0].colors[0].color > '#999999' ? 'white' : 'black'}">Palette</label>-->
-            <label>Palette</label>
+            <label ng-click="slight = !slight" ng-style="{'color': slight == true ? '#DDDDDD' : '#333333'}">Palette</label>
+            <div class="btn-group pull-right" style="margin-top:-9px">
+                <button class="btn btn-secondary" ng-click="hex = !hex" ng-model="hex">Hex</button>
+                <button class="btn btn-secondary" ng-click="rgb = !rgb">RGB</button>
+            </div>
         </div>
         <div style="margin-top:10px">
-            <form class="form-horizontal" style="height:70vh">
-                <div class="panel panel-default col-md-3" style="height:30vh; width:30vh; margin-left:5px; margin-right:5px" ng-repeat="color in palette.colors" ng-style="{'background-color': color.color != null ? color.color : 'red'}">
+            <form class="form-horizontal" style="height:70vh; align-content:center">
+                <div class="panel panel-default col-xs-3 no-padding" style="height:30vh; width:30vh; margin-left:5px; margin-right:5px" ng-repeat="color in palette.colors" ng-style="{'background-color': color.color != null ? color.color : 'red'}">
 
-                    <div class="input-group">
-                        <input type="text" class="form-control" ng-model="color.color" />
-                        <span style="cursor:pointer" class="input-group-addon" ng-click="copy(color)"><i class="ion-ios-copy"></i></span>
+                    <div class="input-group" style="margin-bottom:0px" ng-show="hex">
+                        <input type="text" class="form-control" ng-model="color.colorRgb" ng-change="calcHex(color)"/>
+                        <span style="cursor:pointer" class="input-group-addon" ng-click="copy(color.colorRgb)">C</span>
+                    </div>
+                    <div class="input-group" style="margin-bottom:0px" ng-show="rgb">
+                        <input type="text" class="form-control" ng-model="color.color" ng-change="calcRgb(color)"/>
+                        <span style="cursor:pointer" class="input-group-addon" ng-click="copy(color.color)">C</span>
                     </div>
 
+                    <!--<button class="btn btn-secondary" ng-click="shuffle(color)">
+                        S
+                    </button>-->
                 </div>
                 <button class="btn btn-secondary" ng-click="addColor(palette)">+</button>
             </form>
         </div>
     </div>
-    <button class="btn btn-secondary" ng-click="addPalette()">+</button>
+    <button class="btn btn-secondary" ng-click="addPalette()">+ Palette</button>
+
+
+    <!--<toggle-switch ng-model="hex == !hex"></toggle-switch>-->
+    <!--<toggle-switch ng-model="htmlSwitchStatus"
+                   class="switch-primary switch-large"
+                   knob-label="HTML" on-label="hi"
+                   off-label="bye">
+    </toggle-switch>-->
+    <!--<toggle-switch ng-model="switchStatus"
+                   class="switch-success">
+    </toggle-switch>-->
+    <!--<label class="switcher-container">
+        <input class="ng-pristine ng-untouched ng-valid ng-not-empty" type="checkbox" ng-model="switcherValue">
+        <div class="switcher primary" ng-class="::switcherStyle">
+            <div class="handle-container">
+                <span class="handle handle-on">HEX</span> <span class="handle"></span>
+                <span class="handle handle-off">RGB</span>
+            </div>
+        </div>
+    </label>-->
 </div>
