@@ -1,5 +1,4 @@
 <div style="width:100%; height:60px; box-shadow:" ng-style="{'background-color': palettes[0].colors[0].color != null ? palettes[0].colors[0].color : 'red'}">
-    <!--<label ng-style="{'font-color': palettes[0].colors[0].color > '#999999' ? 'white' : 'black'}">Palette</label>-->
     <a style="margin-left:10px;" class="al-logo clearfix" ng-click="plight = !plight">
         <span ng-style="{'color': palettes[0].colors[1].color != null ? palettes[0].colors[1].color : 'black'}">C</span>
         <span style="margin-left:-7px" ng-style="{'color': plight == true ? '#DDDDDD' : '#333333'}">OLORS</span>
@@ -13,7 +12,7 @@
             <!--<label ng-style="{'font-color': palettes[0].colors[0].color > '#999999' ? 'white' : 'black'}">Palette</label>-->
             <label ng-click="slight = !slight" ng-style="{'color': slight == true ? '#DDDDDD' : '#333333'}">Palette</label>
             <div class="btn-group pull-right" style="margin-top:-9px">
-                <button class="btn btn-secondary" ng-click="hex = !hex" ng-model="hex">Hex</button>
+                <button class="btn btn-secondary" ng-click="hex = !hex">Hex</button>
                 <button class="btn btn-secondary" ng-click="rgb = !rgb">RGB</button>
             </div>
         </div>
@@ -34,7 +33,7 @@
                         S
                     </button>-->
                 </div>
-                <button class="btn btn-secondary" ng-click="addColor(palette)">+</button>
+                <button class="btn btn-secondary" style="margin-left:10px" ng-click="addColor(palette)">+</button>
             </form>
         </div>
     </div>
